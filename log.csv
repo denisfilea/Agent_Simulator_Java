@@ -1,0 +1,71 @@
+id,logtext
+1,Common3: Moto: Parking spot number 7 is now lit up.
+2,Common2: Moto: Parking spot number 6 is now lit up.
+3,Common1: Car: Parking spot number 1 is now lit up.
+4,Big: Bus: Parking spot number 12 is now lit up.
+5,Common3: Moto: No parking spots available. Waiting for some to free up...
+6,Big: Bus: No parking spots available. Waiting for some to free up...
+7,Common2: Car: Parking spot number 2 is now lit up.
+8,Common1: Moto: Parking spot number 5 is now lit up.
+9,Common3: Moto: Vehicle has reached parking spot number 7 and parked.
+10,Big: Bus: No parking spots available. Waiting for some to free up...
+11,Common2: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+12,Common1: Car: Vehicle has reached parking spot number 1 and parked.
+13,Common3: Moto: Vehicle on parking spot number 7 left.
+14,Big: Bus: No parking spots available. Waiting for some to free up...
+15,Common1: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+16,Common2: Moto: is now heading towards parking spot number 6.
+17,Common3: Moto: Parking spot number 7 is now lit up.
+18,Big: Bus: Vehicle has reached parking spot number 12 and parked.
+19,Common1: Moto: is now heading towards parking spot number 5.
+20,Common3: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+21,Common2: Car: A vehicle has failed to reach the designated parking spot, looking for another one...
+22,Big: Bus: Vehicle on parking spot number 12 left.
+23,Common1: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+24,Common3: Moto: is now heading towards parking spot number 7.
+25,Common2: Car: is now heading towards parking spot number 2.
+26,Big: Bus: Parking spot number 12 is now lit up.
+27,Common1: Moto: is now heading towards parking spot number 5.
+28,Common2: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+29,Common3: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+30,Big: Bus: Vehicle has reached parking spot number 12 and parked.
+31,Common1: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+32,Common3: Moto: is now heading towards parking spot number 7.
+33,Common2: Moto: is now heading towards parking spot number 6.
+34,Big: Bus: Vehicle on parking spot number 12 left.
+35,Common1: Moto: is now heading towards parking spot number 5.
+36,Common2: Car: A vehicle has failed to reach the designated parking spot, looking for another one...
+37,Common3: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+38,Big: Bus: Parking spot number 12 is now lit up.
+39,Common1: Moto: A vehicle has failed to reach the designated parking spot, looking for another one...
+40,Common2: Car: is now heading towards parking spot number 2.
+41,Common3: Moto: is now heading towards parking spot number 7.
+42,Big: Bus: A vehicle has failed to reach the designated parking spot, looking for another one...
+43,Common1: Moto: is now heading towards parking spot number 5.
+44,Common2: Moto: Vehicle has reached parking spot number 6 and parked.
+45,Common3: Moto: Vehicle has reached parking spot number 7 and parked.
+46,Big: Bus: is now heading towards parking spot number 12.
+47,Common1: Moto: Vehicle has reached parking spot number 5 and parked.
+48,Common3: Moto: Vehicle on parking spot number 7 left.
+49,Common2: Car: A vehicle has failed to reach the designated parking spot, looking for another one...
+50,Big: Bus: A vehicle has failed to reach the designated parking spot, looking for another one...
+51,Common1: Car: Vehicle on parking spot number 1 left.
+52,Common2: Car: is now heading towards parking spot number 2.
+53,Common3: Finished service.
+54,Big: Bus: is now heading towards parking spot number 12.
+55,Common1: Moto: Vehicle on parking spot number 5 left.
+56,Common2: Car: Vehicle has reached parking spot number 2 and parked.
+57,Big: Bus: A vehicle has failed to reach the designated parking spot, looking for another one...
+58,Common1: Finished service.
+59,Common2: Car: Vehicle on parking spot number 2 left.
+60,Big: Bus: is now heading towards parking spot number 12.
+61,Common2: Moto: Vehicle on parking spot number 6 left.
+62,Big: Bus: A vehicle has failed to reach the designated parking spot, looking for another one...
+63,Common2: Finished service.
+64,Big: Bus: is now heading towards parking spot number 12.
+65,Big: Bus: Vehicle has reached parking spot number 12 and parked.
+66,Big: Bus: Vehicle on parking spot number 12 left.
+67,Big: Bus: Parking spot number 12 is now lit up.
+68,Big: Bus: Vehicle has reached parking spot number 12 and parked.
+69,Big: Bus: Vehicle on parking spot number 12 left.
+70,Big: Finished service.
