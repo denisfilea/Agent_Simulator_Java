@@ -19,7 +19,7 @@ public class Vehicle implements hasType, hasNumber{
         this.parkingNr = 0;
         this.type = type;
         Random random = new Random();
-        parkingTime = random.nextInt(25,40);
+        parkingTime = random.nextInt(50,70);
         timeTaken = random.nextInt(3,15);
     }
 

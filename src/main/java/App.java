@@ -12,11 +12,31 @@ public class App {
     private final List<ParkingSpot> parkingSpots = new ArrayList<>();
     private final List<Vehicle> vehicles = new ArrayList<>();
 
+    public int getVehicleListSize() {
+        return vehicles.size();
+    }
+
+    public void setNrCarP(int nrCarP) {
+        this.nrCarP = nrCarP;
+    }
+
+    public void setNrMotoP(int nrMotoP) {
+        this.nrMotoP = nrMotoP;
+    }
+
+    public void setNrBusP(int nrBusP) {
+        this.nrBusP = nrBusP;
+    }
+
+    public void setNrSemiP(int nrSemiP) {
+        this.nrSemiP = nrSemiP;
+    }
+
     // Random vehicle generator. Odds: 40% Car, 30% Motorcycle, 20% Bus, 10% Semi
     public void generateVehicles() {
         Random random = new Random();
 
-        for (int i = 0; i < ((nrCarP + nrMotoP + nrSemiP + nrBusP) / 2); i++) {
+        for (int i = 0; i < ((nrCarP + nrMotoP + nrSemiP + nrBusP) * 2); i++) {
             int rand = random.nextInt(10);
             if (rand == 0 || rand == 1 || rand == 2 || rand == 3)
                 vehicles.add(new Vehicle("Car"));
@@ -78,36 +98,33 @@ public class App {
             Connection connection = DriverManager.getConnection(url, user, pw);
             Statement statement = connection.createStatement();
             statement.executeUpdate("TRUNCATE log");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
 
 
-        Thread commonGate1 = new GateThread("Common1", threadMap.get("commonGate1"), parkingSpots);
-        Thread commonGate2 = new GateThread("Common2", threadMap.get("commonGate2"), parkingSpots);
-        Thread commonGate3 = new GateThread("Common3", threadMap.get("commonGate3"), parkingSpots);
-        Thread bigGate = new GateThread("Big", threadMap.get("bigGate"), parkingSpots);
+            Thread commonGate1 = new GateThread("Common1", threadMap.get("commonGate1"), parkingSpots);
+            Thread commonGate2 = new GateThread("Common2", threadMap.get("commonGate2"), parkingSpots);
+            Thread commonGate3 = new GateThread("Common3", threadMap.get("commonGate3"), parkingSpots);
+            Thread bigGate = new GateThread("Big", threadMap.get("bigGate"), parkingSpots);
 
-        System.out.println("Parking lot is now open");
+            System.out.println("Parking lot is now open");
+            statement.executeUpdate("INSERT INTO log (logtext) VALUES (\'Parking lot is now open\')");
 
-        commonGate1.start();
-        commonGate2.start();
-        commonGate3.start();
-        bigGate.start();
 
-        try {
+            commonGate1.start();
+            commonGate2.start();
+            commonGate3.start();
+            bigGate.start();
+
             commonGate1.join();
             commonGate2.join();
             commonGate3.join();
             bigGate.join();
 
-            Connection connection = DriverManager.getConnection(url, user, pw);
-            Statement statement = connection.createStatement();
 
             Scanner scanner = new Scanner(System.in);
             String response;
             System.out.println("Parking lot is now closed.");
-            System.out.println("Would you like to export the log? (Y/N)");
+            statement.executeUpdate("INSERT INTO log (logtext) VALUES (\'Parking lot is now closed.\')");
+            System.out.println("\nWould you like to export the log? (Y/N)");
             response = scanner.nextLine();
 
             if (response.equals("y") || response.equals("Y")) {
@@ -118,7 +135,7 @@ public class App {
                 fileWriter.write("id,logtext");
 
                 while (result.next()) {
-                    int id  = result.getInt("id");
+                    int id = result.getInt("id");
                     String logtext = result.getString("logtext");
 
                     String line = String.format("%d,%s", id, logtext);
